@@ -2,7 +2,10 @@
 
 # Automatically install burp cert to android >=7.0 
 # Needs ROOT (android) and ADB
+# Turn on burp beforhand, duh!
 
+rm -f /tmp/cacert_burp.{der,pem}
+rm -f /tmp/cert_installed
 http_proxy=127.0.0.1:8080 wget http://burp/cert -O /tmp/cacert_burp.der
 openssl x509 -inform DER -in /tmp/cacert_burp.der -out /tmp/cacert_burp.pem
 hash=$(openssl x509 -inform PEM -subject_hash_old -in /tmp/cacert_burp.pem | head -1 )
@@ -19,7 +22,7 @@ EOF
 adb pull /system/etc/security/cacerts/"$cert" /tmp/cert_installed
 echo 
 echo
-if diff -q /tmp/"$cert" /tmp/cert_installed; then
+if diff -q /tmp/"$cert" /tmp/cert_installed 2>/dev/null; then
 	echo "Installed successfully!"
 	adb reboot
 else
