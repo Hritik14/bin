@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Usage
+# screenshot OPTION directoryName
+# OPTION: 
+#	-f fullscreen
+#	-s selection
+#	-c current screen
+
+#TODO input validation
+
+case $1 in
+	"-f")
+		param="-window root"
+		;;
+	"-s")
+		param=""
+		;;
+	"-c")
+		param='-window $(xdotool getcurrentwindow)'
+		;;
+esac
+
+#Take screenshot via imagemagick import
+import $param ${2}/`date +%s`.png

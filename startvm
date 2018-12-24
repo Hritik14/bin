@@ -1,0 +1,8 @@
+#!/bin/bash
+
+nid=$(notify-send -p -t 100000000 "$1" "Powering oN")
+if vboxmanage startvm "$1"; then
+	notify-send -r "$nid" "$1" "Powered oN" -t 500
+else
+	notify-send -r "$nid" "$1" "Failed [Already On ?]" -t 500
+fi
