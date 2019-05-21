@@ -1,0 +1,19 @@
+interface=net0
+#same interface is set in dnsmasq and hostapd conf
+
+if [[ $UID != 0 ]]; then
+	echo "Please run as root"
+	exit 1
+fi
+#sudo nmcli radio wifi off
+#sudo rfkill unblock wlan
+systemctl stop NetworkManager
+iw phy phy0 interface add $interface type station
+ip addr add 192.168.123.1/24 dev $interface
+pkill dnsmasq
+dnsmasq -C .dnsmasq.conf
+hostapd .hostapd-test.conf
+systemctl start NetworkManager
+#sudo nmcli radio wifi on
+#sudo systemctl restart NetworkManager #Don't know why
+

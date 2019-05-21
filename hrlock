@@ -1,0 +1,4 @@
+#!/bin/sh
+maim /tmp/lckscreen.png
+convert -channel RGBA -blur 0x10 /tmp/lckscreen.png /tmp/lckscreen.png
+/bin/i3lock -ui /tmp/lckscreen.png

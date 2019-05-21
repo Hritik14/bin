@@ -21,4 +21,12 @@ case "$1" in
 			llk
 		fi
 		;;
+	"monitor") # Requires monitor name as $2
+		mod="/home/$USER/bin/i3/toggle-monitor.sh"
+		if [[ ! -x "$mod" ]]; then
+			echo "toggle-monitor.sh module not installed"
+			exit 1
+		fi
+		$mod $2
+		;;
 esac

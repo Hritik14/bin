@@ -1,0 +1,4 @@
+#!/bin/sh
+#Cannot get systemd unit to get current DISPLAY so,
+env>/tmp/letssee
+/bin/i3lock
