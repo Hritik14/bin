@@ -6,10 +6,11 @@ _dmenu(){
 }
 
 FONT="Source\ Code\ Pro-20"
-if [[ ! -f ~/.clipbox ]]; then
-	>&2 echo "No ~/.i3clipbox file found"
-	echo "No ~/.clipbox file found" | _dmenu 
+CONFIG=~/.clipbox
+if [[ ! -f $CONFIG ]]; then
+	>&2 echo "No $CONFIG file found"
+	echo "No $CONFIG file found" | _dmenu 
 	exit 10
 fi
 
- _dmenu < ~/.i3clipbox | xargs -d "\n" xdotool type
+ _dmenu < $CONFIG | xargs -d "\n" xdotool type
