@@ -2,7 +2,7 @@
 # (C) Copyleft by Hrtk
 
 _dmenu(){
-	cat - | dmenu -l 10 -fn "$FONT" -i
+	cat - | dmenu -b -l 10 -fn "$FONT" -i
 }
 
 FONT="Source\ Code\ Pro-20"
