@@ -13,4 +13,4 @@ if [[ ! -f $CONFIG ]]; then
 	exit 10
 fi
 
- _dmenu < $CONFIG | xargs -d "\n" xdotool type
+sed '/^[[:space:]]*$/d' $CONFIG | _dmenu | xargs -d "\n" xdotool type
