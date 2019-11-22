@@ -1,0 +1,9 @@
+#!/bin/sh
+
+bc << EOF
+scale=4
+$@
+quit
+EOF
+
+# Thanks to https://gitlab.com/teraflops/dotfiles/blob/master/.local/bin/solve.sh
