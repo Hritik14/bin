@@ -32,4 +32,5 @@ ix() {
     curl $opts -F f:1='<-' $* ix.io/$id
 }
 
-ix $*
+ix $* | parcellite
+
