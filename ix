@@ -7,6 +7,9 @@
 #     ix -i ID hello.txt        # replace ID, if you have permission.
 #     ix -d ID
 
+curl(){
+	command curl -s $*
+}
 ix() {
     local opts
     local OPTIND
@@ -32,5 +35,5 @@ ix() {
     curl $opts -F f:1='<-' $* ix.io/$id
 }
 
-ix $* | parcellite
+ix $* | tee /dev/tty | grep http | parcellite &>/dev/null
 
