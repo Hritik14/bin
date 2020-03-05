@@ -2,7 +2,17 @@
 # (C) Copyleft by Hrtk
 
 _dmenu(){
-	cat - | dmenu -b -l 10 -fn "$FONT" -i
+	dmenu -b -l 10 -fn "$FONT" -i
+}
+
+#TODO: mulitine entry support
+process(){
+	if [[ "$1" == 'add' ]]; then
+		echo 
+		#TODO: add 
+	else
+		echo $1 | xargs -d "\n" xdotool type
+	fi
 }
 
 FONT="Source\ Code\ Pro-20"
@@ -13,4 +23,4 @@ if [[ ! -f $CONFIG ]]; then
 	exit 10
 fi
 
-sed '/^[[:space:]]*$/d' $CONFIG | _dmenu | xargs -d "\n" xdotool type
+process "$(sed '/^[[:space:]]*$/d' $CONFIG | _dmenu)"

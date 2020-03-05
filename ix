@@ -35,5 +35,7 @@ ix() {
     curl $opts -F f:1='<-' $* ix.io/$id
 }
 
-ix $* | tee /dev/tty | grep http | parcellite &>/dev/null
+res=$(ix $* | grep http) && (echo $res | parcellite &>/dev/null)
+echo $res
+notify-send "$res"
 
