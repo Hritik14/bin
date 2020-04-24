@@ -61,11 +61,26 @@ fi
 
 
 _rofi () {
-	cat $1 | rofi -dmenu -async-pre-read -p "symbols:"
+	# Stolen from Arch Wiki
+	cat $1 | column -s "$sep" -o "$sep" -t | rofi -dmenu  \
+		 -lines 2 -line-margin 0 -line-padding 1 \
+		 -separator-style none -font "mono 20" \
+		 -cache-dir ~/.cache/special_characters \
+		 -hide-scrollbar \
+		 -color-window "#222222, #222222, #b1b4b3" \
+		 -color-normal "#222222, #b1b4b3, #222222, #005577, #b1b4b3" \
+		 -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
+		 -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3" \
+		 -kb-row-select "Tab" -kb-row-tab "" \
+		 -matching fuzzy \
+		 -p "symbols" \
+		 -l 10 -async-pre-read 10 \
+		 -location 0 -width 50
+
 }
 
 _dmenu () {
-   cat $1 | dmenu -l 10 -p "symbols:"
+   cat $1 | dmenu -l 10 -p "symbols:" -fn "Monospace-22"
 }
 
 
@@ -79,4 +94,4 @@ selected_symbol=$(cut -d "$sep" -f 2 <<< "$selected_string")
 #trim whitespace
 selected_symbol=${selected_symbol// }
 
-xdotool type --delay 100 "$selected_symbol"
+xdotool type  "$selected_symbol"

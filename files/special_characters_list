@@ -1,63 +1,63 @@
-alpha   g-a     :α
-beta    g-b     :β
-gamma   g-g     :γ
-delta   g-d     :δ
-epsilon g-e     :ε
-zeta    g-z     :ζ
-eta     g-h     :η
-theta   g-j     :θ
-iota    g-i     :ι
-kappa   g-k     :κ
-lambda  g-l     :λ
-mu      g-m     :μ
-nu      g-n     :ν
-xi      g-x     :ξ
-omicron g-o     :ο
-pi      g-p     :π
-rho     g-r     :ρ
-sigma   g-s     :σ
-tau     g-t     :τ
-upsilon g-u     :υ
-phi     g-f     :φ
-chi     g-q     :χ
-psi     g-y     :ψ
-omega   g-w     :ω
+alpha   g-a     : α
+beta    g-b     : β
+gamma   g-g     : γ
+delta   g-d     : δ
+epsilon g-e     : ε
+zeta    g-z     : ζ
+eta     g-h     : η
+theta   g-j     : θ
+iota    g-i     : ι
+kappa   g-k     : κ
+lambda  g-l     : λ
+mu      g-m     : μ
+nu      g-n     : ν
+xi      g-x     : ξ
+omicron g-o     : ο
+pi      g-p     : π
+rho     g-r     : ρ
+sigma   g-s     : σ
+tau     g-t     : τ
+upsilon g-u     : υ
+phi     g-f     : φ
+chi     g-q     : χ
+psi     g-y     : ψ
+omega   g-w     : ω
 
 
-Alpha   g-A     :Α
-Beta    g-B     :Β
-Gamma   g-g     :Γ
-Delta   g-D     :Δ
-Epsilon g-E     :Ε
-Zeta    g-Z     :Ζ
-Eta     g-H     :Η
-Theta   g-J     :Θ
-Iota    g-I     :Ι
-Kappa   g-K     :Κ
-Lambda  g-L     :Λ
-Mu      g-M     :Μ
-Nu      g-N     :Ν
-Xi      g-X     :Ξ
-Omicron g-O     :Ο
-Pi      g-P     :Π
-Rho     g-R     :Ρ
-Sigma   g-S     :Σ
-Tau     g-T     :Τ
-Upsilon g-U     :Υ
-Phi     g-F     :Φ
-Chi     g-Q     :Χ
-Psi     g-Y     :Ψ
-Omega   g-W     :Ω
+Alpha   g-A     : Α
+Beta    g-B     : Β
+Gamma   g-g     : Γ
+Delta   g-D     : Δ
+Epsilon g-E     : Ε
+Zeta    g-Z     : Ζ
+Eta     g-H     : Η
+Theta   g-J     : Θ
+Iota    g-I     : Ι
+Kappa   g-K     : Κ
+Lambda  g-L     : Λ
+Mu      g-M     : Μ
+Nu      g-N     : Ν
+Xi      g-X     : Ξ
+Omicron g-O     : Ο
+Pi      g-P     : Π
+Rho     g-R     : Ρ
+Sigma   g-S     : Σ
+Tau     g-T     : Τ
+Upsilon g-U     : Υ
+Phi     g-F     : Φ
+Chi     g-Q     : Χ
+Psi     g-Y     : Ψ
+Omega   g-W     : Ω
 
-accent a a'   :á
-accent e e'   :é
-accent i i'   :í
-accent o o'   :ó
-accent u u'   :ú
-n tilda  n~   :ñ
-enie        :ñ
-ae          :æ
-diameter    :ø
+accent a a'   : á
+accent e e'   : é
+accent i i'   : í
+accent o o'   : ó
+accent u u'   : ú
+n tilda  n~   : ñ
+enie        : ñ
+ae          : æ
+diameter    : ø
 
 
 o with stroke    /o\ \o/    : ø
@@ -259,26 +259,26 @@ broken heart       : 💔
 side heart         : ❥
 
 
-sup1        :¹
-sup2        :²
-sup3        :³
-sup4        :⁴
-sup5        :⁵
-sup6        :⁶
-sup7        :⁷
-sup8        :⁸
-sup9        :⁹
-sup0        :⁰
-sub1        :₁
-sub2        :₂
-sub3        :₃
-sub4        :₄
-sub5        :₅
-sub6        :₆
-sub7        :₇
-sub8        :₈
-sub9        :₉
-sub0        :₀
+sup1        : ¹
+sup2        : ²
+sup3        : ³
+sup4        : ⁴
+sup5        : ⁵
+sup6        : ⁶
+sup7        : ⁷
+sup8        : ⁸
+sup9        : ⁹
+sup0        : ⁰
+sub1        : ₁
+sub2        : ₂
+sub3        : ₃
+sub4        : ₄
+sub5        : ₅
+sub6        : ₆
+sub7        : ₇
+sub8        : ₈
+sub9        : ₉
+sub0        : ₀
 
 superscript n         : ⁿ
 superscript i         : ⁱ
@@ -299,9 +299,10 @@ subscript p           : ₚ
 subscript s           : ₛ
 subscript t           : ₜ
 
-bto  batio3           :BaTiO₃
-tio2                  :TiO₂
-e=mc2                 :E = m·c²
+bto  batio3           : BaTiO₃
+tio2                  : TiO₂
+e=mc2                 : E = m·c²
+
 
 
 smiley_hug1                : (っ´ω｀)っ
@@ -312,11 +313,11 @@ smiley_fight               : (ง •̀_•́)ง
 smiley_fight_srz           : (ง ͠° ͟ʖ ͡°)ง
 smiley_fightL              : L(° O °L)
 smiley_fin_adventure_time  : | (• ◡•)|
-smiley_dunno               : ¯\(°_o)/¯
-smiley_dunno2              : ┐( ﾟーﾟ)┌
-smiley_dunno3              : ¯\(°◡ﾟ)/¯
-smiley dunno4              : ┐('～`；)┌
-smiley dunno5              : ¯\_(ツ)_/¯
+smiley shrug               : ¯\_(ツ)_/¯
+smiley_shrug2              : ┐( ﾟーﾟ)┌
+smiley_shrug3              : ¯\(°◡ﾟ)/¯
+smiley shrug4              : ┐('～`；)┌
+smiley_shrug5               : ¯\(°_o)/¯
 smiley_jake_adventure_time : (❍ᴥ❍ʋ)
 smiley wtf mad             : (ಠ_ಠ)
 smiley_crying              : (ಥ_ಥ)
@@ -337,49 +338,49 @@ inverted wut               : ¿ʇnʍ
 rebels                     : 
 empire                     : 
 
-wide a                     :Ａ
-wide b                     :Ｂ
-wide c                     :Ｃ
-wide d                     :Ｄ
-wide e                     :Ｅ
-wide f                     :Ｆ
-wide g                     :Ｇ
-wide h                     :Ｈ
-wide i                     :Ｉ
-wide j                     :Ｊ
-wide k                     :Ｋ
-wide l                     :Ｌ
-wide m                     :Ｍ
-wide n                     :Ｎ
-wide o                     :Ｏ
-wide p                     :Ｐ
-wide q                     :Ｑ
-wide r                     :Ｒ
-wide s                     :Ｓ
-wide t                     :Ｔ
-wide u                     :Ｕ
-wide v                     :Ｖ
-wide w                     :Ｗ
-wide x                     :Ｘ
-wide y                     :Ｙ
-wide z                     :Ｚ
-wide 0                     :０
-wide 1                     :１
-wide 2                     :２
-wide 3                     :３
-wide 4                     :４
-wide 5                     :５
-wide 6                     :６
-wide 7                     :７
-wide 8                     :８
-wide 9                     :９
-wide .                     :．
-wide ,                     :，
-wide (                     :（
-wide )                     :）
-wide ?                     :？
-wide !                     :！
-wide '                     :＇
+wide a                     : Ａ
+wide b                     : Ｂ
+wide c                     : Ｃ
+wide d                     : Ｄ
+wide e                     : Ｅ
+wide f                     : Ｆ
+wide g                     : Ｇ
+wide h                     : Ｈ
+wide i                     : Ｉ
+wide j                     : Ｊ
+wide k                     : Ｋ
+wide l                     : Ｌ
+wide m                     : Ｍ
+wide n                     : Ｎ
+wide o                     : Ｏ
+wide p                     : Ｐ
+wide q                     : Ｑ
+wide r                     : Ｒ
+wide s                     : Ｓ
+wide t                     : Ｔ
+wide u                     : Ｕ
+wide v                     : Ｖ
+wide w                     : Ｗ
+wide x                     : Ｘ
+wide y                     : Ｙ
+wide z                     : Ｚ
+wide 0                     : ０
+wide 1                     : １
+wide 2                     : ２
+wide 3                     : ３
+wide 4                     : ４
+wide 5                     : ５
+wide 6                     : ６
+wide 7                     : ７
+wide 8                     : ８
+wide 9                     : ９
+wide .                     : ．
+wide ,                     : ，
+wide (                     : （
+wide )                     : ）
+wide ?                     : ？
+wide !                     : ！
+wide '                     : ＇
 wide space                 : 　 
 
 
