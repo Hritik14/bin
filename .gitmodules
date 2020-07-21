@@ -1,0 +1,3 @@
+[submodule "teraflops"]
+	path = teraflops
+	url = https://gitlab.com/teraflops/dotfiles

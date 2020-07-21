@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $# -ge 1  && -n "$1" ]]; then
+	param="$*"
+else
+	param=$(cat -)
+fi
+
+echo -n "$param"
