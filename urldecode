@@ -1,7 +1,8 @@
 #!/bin/bash
 # urldecode <string>
 
-url_encoded="${1//+/ }"
+param=$(get_arg_or_stdin "$*")
+url_encoded="${param//+/ }"
 printf '%b' "${url_encoded//%/\\x}"
 
 #via : https://gist.github.com/cdown/1163649
