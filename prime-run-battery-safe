@@ -1,0 +1,21 @@
+#!/bin/bash
+# instructs application launcher to run everything via the dedicated graphics card *if*
+# 	- Charging and
+# 	- Battery above 50%
+
+set -e
+BATTERY_INFO=$(upower -i $(upower -e| grep BAT))
+BATTERY_STATE=$(echo "${BATTERY_INFO}" | grep -wo "full\|charging\|discharging" -m 1)
+BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' -m 1 | cut -d% -f 1 | tr -d '%')
+
+if [[ "$1" == "--info" ]]; then
+	INFO=true
+fi
+
+if [[ "$BATTERY_STATE" == "charging" && "$BATTERY_POWER" > 50 ]]; then
+	[[ -n $INFO ]] && echo "dedicated"
+	[[ -n $INFO ]] || prime-run "$*"
+else
+	[[ -n $INFO ]] && echo "integrated"
+	[[ -n $INFO ]] || "$*"
+fi

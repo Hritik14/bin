@@ -94,4 +94,5 @@ selected_symbol=$(cut -d "$sep" -f 2 <<< "$selected_string")
 #trim whitespace
 selected_symbol=${selected_symbol// }
 
-xdotool type  "$selected_symbol"
+xdotool type "$selected_symbol"
+echo "$selected_symbol" | xclip

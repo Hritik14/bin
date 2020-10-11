@@ -1,0 +1,40 @@
+#!/bin/bash
+
+NOTIF_ID=31415
+APPNAME="Powersupply"
+
+
+# Courtesy to: (Fabio. A) https://stackoverflow.com/a/49533938/2251364
+function Xuser() {
+	echo "Xuser triggered" >>/tmp/powerchange
+    #Detect the name of the display in use
+    local display=":$(ls /tmp/.X11-unix/* | sed 's#/tmp/.X11-unix/X##' | head -n 1)"
+
+    #Detect the user using such display
+    #local user=$(who | grep '('$display')' | awk '{print $1}' | head -n 1)
+	local user="hritik"
+
+    #Detect the id of the user
+    local uid=$(id -u $user)
+
+    sudo -u $user DISPLAY=$display DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$uid/bus "$@"
+}
+
+notify(){
+	Xuser /usr/bin/dunstify -a "$APPNAME" -t 2000 -r $NOTIF_ID "$@"
+}
+
+
+function main(){
+	if [[ "${POWER_SUPPLY_ONLINE}" == "1" ]]; then 
+		notify -i /home/hritik/bin/files/charging.png "Plugged in"
+
+	elif [[ "${POWER_SUPPLY_ONLINE}" == "0" ]]; then
+		notify -i /home/hritik/bin/files/discharging.png -u critical "Plugged out"
+	else
+		notify "$APPNAME" "Something weird happened"
+	fi
+
+}
+
+main
