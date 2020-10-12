@@ -3,7 +3,7 @@
 # selected, it is pasted to the cursor via xdotool. Symbols can be added to the
 # menu on the character_list with any keyword, but make sure to keep the syntax
 #
-# syntax: 
+# syntax:
 #     keyword    :$symbol
 #
 # $symbol will be the character printed via xdotool. Anything between the
@@ -21,7 +21,7 @@
 # want with this script.
 
 launcher="rofi" # dmenu/rofi
-character_list="files/special_characters_list files/font-awesome_list"
+character_list="files/special_characters_list files/font-awesome_list files/whatsapp_emoji_list"
 sep=":"
 
 cd "$(dirname "$0")" || exit
@@ -63,6 +63,7 @@ fi
 _rofi () {
 	# Stolen from Arch Wiki
 	cat $1 | column -s "$sep" -o "$sep" -t | rofi -dmenu  \
+		 -i \
 		 -lines 2 -line-margin 0 -line-padding 1 \
 		 -separator-style none -font "mono 20" \
 		 -cache-dir ~/.cache/special_characters \
@@ -72,7 +73,7 @@ _rofi () {
 		 -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
 		 -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3" \
 		 -kb-row-select "Tab" -kb-row-tab "" \
-		 -matching fuzzy \
+		 -matching normal \
 		 -p "symbols" \
 		 -l 10 -async-pre-read 10 \
 		 -location 0 -width 50
@@ -80,7 +81,7 @@ _rofi () {
 }
 
 _dmenu () {
-   cat $1 | dmenu -l 10 -p "symbols:" -fn "Monospace-22"
+   cat $1 | dmenu -l -i 10 -p "symbols:" -fn "Monospace-22"
 }
 
 

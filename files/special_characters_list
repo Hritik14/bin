@@ -147,52 +147,6 @@ left double quote ldq     : “
 right double quote rdq    : ”
 right quote rq            : ’
 
-box drawing 1             : ░
-box drawing 2             : ▒
-box drawing 3             : ▓
-box drawing 4             : █
-
-line drawing               : └
-line drawing               : ─
-line drawing               : ┘
-line drawing               : │
-line drawing               : ┼
-line drawing               : │
-line drawing               : ┌
-line drawing               : ─
-line drawing               : ┐
-line drawing               : ┴
-
-line drawing               : ┴
-line drawing               : ├
-line drawing               : ┤
-line drawing               : ┬
-
-
-double line drawing        : ╚
-double line drawing        : ═
-double line drawing        : ╝
-double line drawing        : ║
-double line drawing        : ┼
-double line drawing        : ║
-double line drawing        : ╔
-double line drawing        : ═
-double line drawing        : ╗
-
-double line drawing        : ╩
-double line drawing        : ╠
-double line drawing        : ╣
-double line drawing        : ╦
-
-left bracket              : ｢
-right bracket             : ｣
-right angle bracket       : 〉
-left angle bracket        : 〈
-left corner bracket       : 「
-right corner bracket      : 」
-fat left corner bracket   : 『
-fat right corner bracket  : 』
-
 
 frog                      : 🐸
 cow                       : 🐮
@@ -244,7 +198,7 @@ CO                 : ©
 registered         : ®
 CR                 : ®
 micron    ,u,      : µ
-paragraph          : ¶ 
+paragraph          : ¶
 super pi           : ℼ
 euler              : ℯ
 italic n           : 𝒏
@@ -381,7 +335,7 @@ wide )                     : ）
 wide ?                     : ？
 wide !                     : ！
 wide '                     : ＇
-wide space                 : 　 
+wide space                 : 　
 
 
 rupee						: ₹
