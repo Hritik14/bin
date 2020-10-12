@@ -28,10 +28,10 @@ volume="$(amixer -D pulse get Master | tail -1 | grep -Eo '[0-9]+%' | tr -d '%')
 status="$(amixer -D pulse get Master | tail -1 | grep -Eo '\[(on|off)\]' | tr -d '[]')"
 if [[ "$volume" == 0 || "$status" == "off" ]]; then
     # Show the sound muted notification
-    dunstify -a "showVolume" -u critical -i audio-volume-muted -r "$msgId" "Volume muted" 
+    dunstify -a "showVolume"  -i audio-volume-muted -r "$msgId" "Volume muted" 
 else
     # Show the volume notification
-    dunstify -a "showVolume" -u critical -i audio-volume-high -t 1000 -r "$msgId" \
+    dunstify -a "showVolume"  -i audio-volume-high -t 1000 -r "$msgId" \
 		"Volume: ${volume}%" "$($HOME/bin/getProgressString 10 "<b> </b>" " " $((volume/2)))"
 fi
 

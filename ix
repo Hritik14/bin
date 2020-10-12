@@ -27,7 +27,7 @@ ix() {
         local filename="$1"
         shift
         [ "$filename" ] && {
-            curl $opts -F f:1=@"$filename" $* ix.io/$id
+            curl $opts -F f:1=@"$filename" -F ext:1="${filename##*.}" $* ix.io/$id
             return
         }
         echo "^C to cancel, ^D to send."
@@ -36,6 +36,6 @@ ix() {
 }
 
 res=$(ix $* | grep http) && (echo $res | parcellite &>/dev/null)
-echo $res
-notify-send "$res"
+echo $res/
+notify-send "$res"/
 

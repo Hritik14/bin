@@ -1,0 +1,21 @@
+#!/bin/bash
+# application launcher which uses prime-run-battery-safe
+
+set -e
+
+info=$("$HOME"/bin/prime-run-battery-safe --info)
+if [[ "$info" == "dedicated" ]]; then
+	prompt=""
+else
+	prompt=""
+fi
+
+dmenu_opts="-l 10 \
+-fn 'Source Code Pro-20' \
+-i \
+-p '$prompt'"
+
+j4-dmenu-desktop --run-command="$HOME/bin/prime-run-battery-safe {}" \
+	--usage-log="~/.cache/j4-dmenu-desktop.log" \
+	--dmenu="dmenu $dmenu_opts"
+

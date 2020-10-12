@@ -1,0 +1,3 @@
+#!/bin/bash
+printf 'obase=16;ibase=2;%s\n' "$(cat -)" | bc | xxd -p -r
+
